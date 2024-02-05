@@ -1,0 +1,11 @@
+npm init -y
+create public folder and create html file
+npm install -D tailwindcss
+npx tailwindcss init
+change .js file
+create src folder and create .css file
+add css @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+add link in html file
