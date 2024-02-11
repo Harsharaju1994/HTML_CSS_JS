@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Basics</title>
+  </head>
+  <body>
+    <h1>JS-Basics</h1>
+    <h2 id="name">Hello world</h2>
+    <button onclick="changeName()">click</button>
+
+    <script>
+      changeName = () => {
+        document.getElementById("name").innerHTML = "Hello Raj...";
+      };
+      var a = 100;
+      console.log(a);
+      let b = 200; //es6 block level scope, using var using no scope
+      console.log(b);
+      const c = 300; //es6
+      console.log(c);
+      var big = a > b ? a : b;
+      document.write(big);
+      //   TypeConversion
+      //   1. Implicity 2.Explicity
+
+      //conditional
+
+      var a1 = 21;
+      var a2 = 34;
+      var a3 = 29;
+      if (a1 > a2) {
+        console.log(a1);
+      } else {
+        console.log(a2);
+      }
+
+      if (a3 > 20) {
+        document.write(a3 + " is grater than 20" + "<br />");
+      } else if (a3 == 20) {
+        document.write(a3 + " is equal" + "<br />");
+      } else {
+        document.write(a3 + " is lessthan 20");
+      }
+
+      //switch
+      let today = 65;
+      switch (today) {
+        case 1:
+          console.log("Monday");
+          break;
+        case 2:
+          console.log("Tusday");
+          break;
+        case 3:
+          console.log("wednesday");
+          break;
+        case 4:
+          console.log("Thursday");
+          break;
+        case 6:
+          console.log("Saterday");
+          break;
+        case 7:
+          console.log("Sunday");
+          break;
+        default:
+          console.log("no day");
+          break;
+      }
+
+      //Loops -> for(in,of),while,do-while,continue,break
+      var sum = 0;
+      for (let count = 1; count < 10; count++) {
+        sum = sum + count;
+      }
+      console.log(sum);
+
+      var a5 = 1;
+      while (a5 < 5) {
+        console.log(a5);
+        a5++;
+      }
+      do {
+        console.log(a5);
+        a5++;
+      } while (a5 < 6);
+
+      //Template Literal
+      var a4 = 78;
+      console.log(`number is ${a4} `);
+      //for in loop
+      var ob = ["ab", "bc", "cd", "de"];
+      for (i in ob) {
+        console.log(i);
+      }
+      //for of loop
+      var fru = ["ki", "nhg", "kj", "bli"];
+      for (i1 of fru) {
+        console.log(i1);
+      }
+      //Functions
+      //1.named function
+      //2.anonymous function
+      //3.immediately invoked function exprsion
+      //4.arrow function
+      function name() {
+        console.log("n1");
+        console.log("n2");
+        console.log("n3");
+        console.log("n4");
+      }
+      name();
+      function name1(int1, int2) {
+        console.log(int1 + int2);
+      }
+      name1(8, 5);
+      let name2 = function () {
+        console.log("anonimus");
+      };
+      name2();
+      const name3 = () => {
+        console.log("Arrow Function");
+      };
+      name3();
+      //arrays
+      var movies = ["Eagle", "Simha", "Hanuman"];
+      var movies1 = new Array("Lion", "Tiger", "Dragon");
+      console.log(movies);
+      console.log(movies1);
+      console.log(movies.length);
+      console.log(typeof movies1);
+      movies.push("dee"); //last add
+      console.log(movies);
+      console.log(movies.pop());
+      console.log(movies);
+      movies.unshift("dee"); //first add
+      console.log(movies);
+      console.log(movies.shift());
+      console.log(movies);
+      console.log(movies.indexOf("Hanuman"));
+      console.log(movies.slice(1, 3));
+      //scopes -> Global,Local,Block
+      var s = 10; //GLobal
+      function f1() {
+        var s2 = 10; //Local or functional
+      }
+      {
+        var s3 = 23; //Block
+      }
+      //forEach
+      var salaries = [30000, 42000, 39000, 19999, 20000];
+      salaries.forEach((s, index) => {
+        console.log(s);
+        let inc = s / 10;
+        salaries[index] = s + inc;
+      });
+      console.log(salaries);
+      //set
+      let set1 = new Set();
+      set1.add("raju");
+      set1.add("erw");
+      set1.add("raju");
+      console.log(set1);
+      //Object
+      let person1 = {
+        name: "person1",
+        age: 45,
+        graduation: true,
+        assets: {
+          land: 2,
+          house: "yes",
+        },
+      };
+      person1["place"] = "Hyderabad";
+      console.log(person1);
+      console.log(person1.age);
+    </script>
+  </body>
+</html>

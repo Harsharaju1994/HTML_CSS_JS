@@ -3,6 +3,8 @@
     "development"
   ],
   "hints": {
-    "meta-viewport": "off"
+    "meta-viewport": "off",
+    "detect-css-reflows/composite": "off",
+    "button-type": "off"
   }
 }

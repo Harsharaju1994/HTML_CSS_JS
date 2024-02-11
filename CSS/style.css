@@ -1,3 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  background-color: azure;
+}
+
+.one {
+  top: 200px;
+  background-color: red;
+  height: 200px;
+  width: 100%;
+  position: relative;
+}
+.two {
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 40%;
+  top: 50px;
 }
