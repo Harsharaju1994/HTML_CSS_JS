@@ -176,6 +176,60 @@
       person1["place"] = "Hyderabad";
       console.log(person1);
       console.log(person1.age);
+      //Object->second
+      let person2 = new Object();
+      person2.name = "person2";
+      console.log(person2.name);
+      //Object->third
+      function user(n, a, p) {
+        this.name = n;
+        this.age = a;
+        this.place = p;
+      }
+      let user1 = new user("user1", 32, "xyz");
+      console.log(user1);
+      let user2 = new user("user2", 22, "sfr");
+      console.log(user2);
+      //Object -> fourth
+      let user3 = Object.create(user1);
+      console.log("user1:");
+      console.log(user1);
+      user3.name = "jih";
+      user3.age = 76;
+      console.log("user3 : ");
+      console.log(user3);
+      //console method
+      let s9 = "dre";
+      console.log(s9);
+      console.info(s9);
+      console.warn(s9);
+      console.error(s9);
+      console.table(["dt", "er", "dhf"]); //object also give
+      //   console.clear(s9);
+      console.assert(10 > 34, "condition false");
+      // .count, .countreset(), .time(), .Timelog(), .timeend(), .group(), .groupend()
+      //callback function
+      function first(test) {
+        test();
+        console.log("this is first function");
+      }
+      function second() {
+        console.log("this is second function");
+      }
+      first(second);
+      var arr = [4, 5, 7, 2, 8, 24];
+
+      function square(arr) {
+        squares = [];
+        for (ele of arr) {
+          let res = ele * ele;
+          squares.push(res);
+        }
+        console.log(squares);
+      }
+      square(arr);
+
+      console.log(this);
     </script>
   </body>
 </html>
