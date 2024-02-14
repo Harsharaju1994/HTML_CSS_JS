@@ -230,6 +230,38 @@
       square(arr);
 
       console.log(this);
+
+      //call,bind,apply
+      var salary = 20000;
+      function getSalary(a, b) {
+        console.log(this.salary);
+        console.log(a, b);
+      }
+
+      employee = {
+        salary: 30000,
+      };
+      employee1 = {
+        salary: 40000,
+      };
+      employee2 = {
+        salary: 60000,
+      };
+      getSalary.call(employee, 45, 35);
+      getSalary.apply(employee1, [45, 23]);
+      var f1 = getSalary.bind(employee2, 56, 34);
+      f1();
+      //date
+      let date = new Date("2024-02-13");
+      console.log(date);
+      //math
+      let x = Math.floor(3.8);
+      console.log(x);
+
+      //string
+      let s4 = "JavaScript";
+      console.log(s4.charAt("a"));
+      //indexOf,toUpperCase(),toLowerCase(),concat(),
     </script>
   </body>
 </html>
